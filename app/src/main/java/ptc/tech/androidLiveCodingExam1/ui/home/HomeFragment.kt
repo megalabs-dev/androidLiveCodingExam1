@@ -1,6 +1,9 @@
 package ptc.tech.androidLiveCodingExam1.ui.home
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
@@ -35,7 +38,7 @@ class HomeFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_start -> {
-                homeViewModel.fetchContacts()
+                context?.let { homeViewModel.fetchContacts(it) }
                 true
             }
             else -> super.onOptionsItemSelected(item)
@@ -106,6 +109,17 @@ class ContactListAdapter(private val dataSet: Array<ContactEntity>) :
         val contact = dataSet[position]
         viewHolder.fullNameTextView.text = String.format("%s %s", contact.firstName, contact.lastName)
         viewHolder.adderssTextView.text = String.format("%s, %s, %s, %s", contact.street, contact.city, contact.state, contact.country)
+
+        var image: Bitmap? = null
+        try {
+            val stream = java.net.URL(contact.avatar).openStream()
+            image = BitmapFactory.decodeStream(stream)
+        }
+        catch (e: Exception) {
+            Log.e("Error Message", e.message.toString())
+            e.printStackTrace()
+        }
+        viewHolder.avatarImageView.setImageBitmap(image)
     }
 
     // Return the size of your dataset (invoked by the layout manager)

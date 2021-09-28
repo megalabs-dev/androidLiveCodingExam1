@@ -31,7 +31,7 @@ data class ContactEntity(
         this.country = locationJson.getString("country")
 
         val dobJson = json.getJSONObject("dob")
-        val inputFormater = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ")
+        val inputFormater = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
         this.birthday = inputFormater.parse(dobJson.getString("date"))
 
         val pictureJson = json.getJSONObject("picture")
