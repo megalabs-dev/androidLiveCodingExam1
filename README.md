@@ -30,7 +30,7 @@ Android Live Coding Exam 1
 
 ## Exercise
 
-<img src="./sample.gif" width="300" alt="Sample" />
+<img src="./sample.png" width="300" alt="Sample" />
 
 App has 2 tabs:
 1. Tab 1: **Sample**
@@ -47,12 +47,12 @@ App has 2 tabs:
 
 2. Rebuild
 
-<img src="./exam.gif" width="300" alt="Basic" />
+<img src="./exam.gif" width="300" alt="Exam" />
 
 In **tab 2**, rebuild the contact list with required:
 ### Structure & build layout
 - Use and refactor the current **MVVM** model in **tab 2**
-- Use **Kotlin**
+- Use **Kotlin** and **Jet Compose** to build layout
 - Use **Corountine** to build asynchronous 
 - Build one more screen Contact Detail (with defined UI) and navigate from list to detail
 - The `avatar` image on screen must be `lazy loading` with `placeholder`
