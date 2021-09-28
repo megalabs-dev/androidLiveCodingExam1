@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">androidLiveCodingExam1</string>
+    <string name="title_home">Sample</string>
+    <string name="title_dashboard">Exam</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="action_start">Start</string>
+</resources>
