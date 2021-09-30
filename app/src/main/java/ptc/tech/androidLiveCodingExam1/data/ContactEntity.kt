@@ -39,4 +39,12 @@ data class ContactEntity(
 
         this.nationality = json.getString("nat")
     }
+
+    fun fullAddress(): String {
+        return "${street}, ${city}, ${state}, $country"
+    }
+
+    fun fullName(): String {
+        return "$firstName $lastName"
+    }
 }

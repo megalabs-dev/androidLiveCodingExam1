@@ -67,3 +67,7 @@ In **tab 2**, rebuild the contact list with required:
 ### Local Storage & Caching
 - Update `Start` button to `Refresh` button in case the list is loaded. Touch on `Refresh` button, call API and reload the contact list
 - Cache the contact list in `2 minutes`, don't all API if cache data still is valid, even relaunch the app
+
+## Screenshots
+
+<img src="./exam.png" width="600" alt="Exam" />
